@@ -59,6 +59,12 @@ services:
 # Mercure is installed as a Caddy module, prevent the Flex recipe from installing another service
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###
+  
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - 8025:8025
+      - 1025:1025
 
 volumes:
   caddy_data:
